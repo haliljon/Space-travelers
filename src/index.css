@@ -1,0 +1,11 @@
+nav ul {
+  list-style: none;
+}
+
+.nav-link a {
+  text-decoration: none;
+}
+
+.nav-link a.active {
+  text-decoration: underline;
+}
