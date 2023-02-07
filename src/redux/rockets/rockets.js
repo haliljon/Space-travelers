@@ -23,6 +23,7 @@ export const fetchRockets = createAsyncThunk(
             name: i.rocket_name,
             type: i.rocket_type,
             flickr_images: i.flickr_images,
+            description: i.description,
           });
         });
       });
