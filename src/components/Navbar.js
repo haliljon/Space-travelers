@@ -21,13 +21,13 @@ const Navbar = () => {
   ];
   return (
     <header>
-      <nav>
+      <nav className="p-3" style={{ boxShadow: '1px 1px whitesmoke' }}>
         <h1>
           <img src={planet} alt="Logo" />
           {' '}
           Space Travelers&apos; hub
         </h1>
-        <ul>
+        <ul className="conatiner align-items-center m-0">
           {links.map((link) => (
             <li key={link.id} className="nav-link">
               <NavLink to={link.path}>{link.text}</NavLink>
