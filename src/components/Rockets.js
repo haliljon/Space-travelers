@@ -20,7 +20,7 @@ const Rockets = () => {
             <img src={rocket.flickr_images[0]} alt="rocket" style={{ width: '250px', height: '200px' }} className="p-0" />
           </div>
           <div>
-            <h2 style={{ fontSize: '1.5em' }}>{rocket.name}</h2>
+            <h2 style={{ fontSize: '1.51em' }}>{rocket.name}</h2>
             <p>
               {rocket.reserved && <span className="badge me-2" style={{ background: 'darkcyan' }}>Reserved</span>}
               {rocket.description}
