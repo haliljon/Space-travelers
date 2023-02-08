@@ -25,7 +25,7 @@
 
 # 📖 Space Travelers' Hub <a name="about-project"></a>
 
-**Space Travelers' Hub** The app shows rockets, dragons and missions. It lets the user to reserve rockets, dragons and mission and so on.
+**Space Travelers' Hub** The app works with real live data from the SpaceX API to display rockets, dragons and missions. It lets the user to reserve rockets, book dragons and join mission and allows a user to view all reserved rockets, dragons, and space missions.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -85,6 +85,26 @@
 ## 💻 Getting Started with Create React App <a name="getting-started"></a>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+- Install git in your computer.
+- Install a code editor.
+- And web browser to view the output.
+
+### Setup
+
+Clone this repository to your desired folder:
+
+- `cd my-folder`
+- `git clone https://github.com/haliljon/Space-travelers`
+
+### Install
+
+ Navigate to directory with `cd my-project`
+- Run `npm install` to install the dependencies.
 
 ## Available Scripts
 
