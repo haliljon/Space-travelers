@@ -15,8 +15,8 @@ const Navbar = () => {
     },
     {
       id: 3,
-      path: '/myProfile',
-      text: 'My Profile',
+      path: '/dragons',
+      text: 'Dragons',
     },
   ];
   return (
@@ -33,7 +33,8 @@ const Navbar = () => {
               <NavLink to={link.path}>{link.text}</NavLink>
             </li>
           ))}
-
+          <li>|</li>
+          <li className="nav-link"><NavLink to="/myProfile">My Profile</NavLink></li>
         </ul>
       </nav>
     </header>
