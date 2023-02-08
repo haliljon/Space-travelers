@@ -1,6 +1,10 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { joinMission } from '../redux/missions/missions';
+import { booking } from '../redux/dragons.js/dragons';
+import { reservation } from '../redux/rockets/rockets';
 
 const MyProfile = () => {
+  const dispatch = useDispatch();
   const missionsStore = useSelector((state) => state.missions);
   const allRockets = useSelector((state) => state.rockets);
   const allDragons = useSelector((state) => state.dragons);
@@ -20,7 +24,16 @@ const MyProfile = () => {
           </div>
           <div>
             {myMissions.map((mission) => (
-              <div className="border p-3" key={mission.id}>{mission.name}</div>
+              <div className="border p-3 d-flex justify-content-between" key={mission.id}>
+                <div>{mission.name}</div>
+                <button
+                  type="button"
+                  className="btn btn-outline-danger"
+                  onClick={() => dispatch(joinMission(mission))}
+                >
+                  Leave Mission
+                </button>
+              </div>
             ))}
           </div>
         </div>
@@ -31,7 +44,12 @@ const MyProfile = () => {
           </div>
           <div>
             {myRockets.map((rocket) => (
-              <div className="border p-3" key={rocket.id}>{rocket.name}</div>
+              <div className="border p-3 d-flex justify-content-between" key={rocket.id}>
+                <div>{rocket.name}</div>
+                <button type="button" className="btn btn-outline-secondary" onClick={() => dispatch(reservation(rocket.id))}>
+                  Cancel Reservation
+                </button>
+              </div>
             ))}
           </div>
         </div>
@@ -42,7 +60,13 @@ const MyProfile = () => {
           </div>
           <div>
             {myDragons.map((dragon) => (
-              <div className="border p-3" key={dragon.id}>{dragon.name}</div>
+              <div className="border p-3 d-flex justify-content-between" key={dragon.id}>
+                <div>{dragon.name}</div>
+                <button type="button" className="btn btn-outline-secondary" onClick={() => dispatch(booking(dragon.id))}>
+                  Cancel Booking
+                  {' '}
+                </button>
+              </div>
             ))}
           </div>
         </div>
