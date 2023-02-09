@@ -6,7 +6,6 @@ const RESERVE_ROCKET = 'space travelers/redux/rockets/RESERVE_ROCKET';
 export const rocketsReducer = (state = { status: 'default', rockets: [] }, action) => {
   switch (action.type) {
     case `${ALL_ROCKETS}/fulfilled`:
-      // console.log(action.payload);
       return { status: 'succeeded', rockets: action.payload };
 
     case RESERVE_ROCKET: {
