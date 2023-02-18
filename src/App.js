@@ -5,7 +5,7 @@ import Rockets from './components/Rockets/Rockets';
 import MissionsList from './components/Mission/MissionsList';
 import Dragons from './components/Dragons';
 import RocketSpecs from './components/Rockets/RocketSpecs';
-import MyProfile from './components/MyProfile.js';
+import MyProfile from './components/MyProfile';
 
 function App() {
   return (
