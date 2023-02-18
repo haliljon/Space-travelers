@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import planet from '../assets/planet.png';
+import planet from '../../assets/planet.png';
+import './Navbar.css';
 
 const Navbar = () => {
   const links = [
@@ -18,23 +19,28 @@ const Navbar = () => {
       path: '/dragons',
       text: 'Dragons',
     },
+
+    {
+      id: 4,
+      path: '/myProfile',
+      text: 'My Profile',
+    },
   ];
+
   return (
     <header>
-      <nav className="p-3" style={{ boxShadow: '1px 1px whitesmoke' }}>
+      <nav className="container-fluid py-3 px-5 mb-5" style={{ boxShadow: '1px 1px whitesmoke' }}>
         <h1>
           <img src={planet} alt="Logo" />
           {' '}
           Space Travelers&apos; hub
         </h1>
-        <ul className="conatiner align-items-center m-0">
+        <ul className="conatiner d-flex align-items-center m-0">
           {links.map((link) => (
-            <li key={link.id} className="nav-link">
-              <NavLink to={link.path}>{link.text}</NavLink>
+            <li key={link.id}>
+              <NavLink to={link.path} className="navLink mx-3">{link.text}</NavLink>
             </li>
           ))}
-          <li>|</li>
-          <li className="nav-link"><NavLink to="/myProfile">My Profile</NavLink></li>
         </ul>
       </nav>
     </header>
