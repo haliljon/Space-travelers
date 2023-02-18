@@ -1,10 +1,11 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Rockets from './components/Rockets';
-import MissionsList from './components/MissionsList';
-import MyProfile from './components/myProfile';
+import Navbar from './components/Navbar/Navbar';
+import Rockets from './components/Rockets/Rockets';
+import MissionsList from './components/Mission/MissionsList';
+import MyProfile from './components/MyProfile';
 import Dragons from './components/Dragons';
+import RocketSpecs from './components/Rockets/RocketSpecs';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/missions/*" element={<MissionsList />} />
         <Route exact path="/dragons" element={<Dragons />} />
         <Route exact path="/myProfile/*" element={<MyProfile />} />
+        <Route path="/rockets/:id" element={<RocketSpecs />} />
       </Routes>
     </>
   );

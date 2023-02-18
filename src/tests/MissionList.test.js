@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import MissionsList from '../components/MissionsList';
+import MissionsList from '../components/Mission/MissionsList';
 import store from '../redux/configureStore';
 
 it('matches snapshot', () => {

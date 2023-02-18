@@ -6,7 +6,7 @@ import { reservation } from '../redux/rockets/rockets';
 const MyProfile = () => {
   const dispatch = useDispatch();
   const missionsStore = useSelector((state) => state.missions);
-  const allRockets = useSelector((state) => state.rockets);
+  const allRockets = useSelector((state) => state);
   const allDragons = useSelector((state) => state.dragons);
   const { missions } = missionsStore;
   const { rockets } = allRockets;

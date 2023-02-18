@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { displayMissions, joinMission } from '../redux/missions/missions';
+import { displayMissions, joinMission } from '../../redux/missions/missions';
 import Mission from './Mission';
 
 const MissionsList = () => {
@@ -16,7 +16,7 @@ const MissionsList = () => {
   }, [dispatch, status]);
 
   return (
-    <table className="table table-striped container table-hover mt-5 mb-5">
+    <table className="table table-striped container border mt-5 mb-5">
       <tbody>
         <tr>
           <th>Mission</th>
